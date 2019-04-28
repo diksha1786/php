@@ -6,7 +6,7 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 include('header.php');
   $var1 =  $_SESSION['userid'];
 
-	$var2 =	$_SESSION['username']
+	$var2 =	$_SESSION['username'];
 
 
 ?>
