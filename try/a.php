@@ -34,8 +34,8 @@ mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 //                   }
 //                   elseif($psdcheck==true){
 //                          session_start();
-//                         //  $_SESSION['userid']=$row['id'];
-//                         //  $_SESSION['username']=$row['username'];
+//                           $_SESSION['userid']=$row['id'];
+//                           $_SESSION['username']=$row['username'];
 //                          header("Location: a.php?login=success");
 //                     exit();
 //                   }
@@ -79,9 +79,10 @@ if(isset($_POST['submit'])) {
     if (mysqli_num_rows($result)==1) {
         echo"you have Successfully logged in";
         // include 'Dashboard.php';
-		header("location:Dashboard.php");
 		$_SESSION['userid']=$row['id'];
 		$_SESSION['username']=$row['username'];
+	
+		header("location:Dashboard.php");
 
 
      exit();
