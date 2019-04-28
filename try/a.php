@@ -77,6 +77,7 @@ if(isset($_POST['submit'])) {
 	$result=mysqli_query($conn,"SELECT * FROM usermaster WHERE username = '$uname' AND password = '$password' ");
 	
     if (mysqli_num_rows($result)==1) {
+	if($row = mysqli_fetch_assoc($result)){
         echo"you have Successfully logged in";
         // include 'Dashboard.php';
 		$_SESSION['userid']=$row['id'];
@@ -86,6 +87,7 @@ if(isset($_POST['submit'])) {
 
 
      exit();
+	    }
     } else {
         echo"You have enter incorrect password";
          exit();
