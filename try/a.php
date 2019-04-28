@@ -82,8 +82,10 @@ if(isset($_POST['submit'])) {
         // include 'Dashboard.php';
 		$_SESSION['userid']=$row['id'];
 		$_SESSION['username']=$row['username'];
-	
-		header("location:Dashboard.php");
+	echo $_SESSION['userid'];
+	$var3 =	$_SESSION['username'];
+		echo $var3;
+	//	header("location:Dashboard.php");
 
 
      exit();
