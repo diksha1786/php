@@ -4,6 +4,9 @@ ini_set('display_startup_errors',1);
 error_reporting(E_ALL);
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 include('header.php');
+  $var1 =  $_SESSION['userid'];
+
+	$var2 =	$_SESSION['username']
 
 
 ?>
@@ -53,7 +56,10 @@ while($res=mysqli_fetch_array($show)){
 ?>
 <tr>
 <td>
-<?php echo $res['id'];?>
+<?php echo $res['id'];
+	echo $var1;
+				      echo $var2;
+	?>
 </td>
 <td>
 <?php echo $res['email'];?>
